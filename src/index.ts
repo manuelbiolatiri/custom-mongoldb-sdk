@@ -1,7 +1,15 @@
-const { MongoClient } = require('mongodb');
-const { Server } = require('socket.io');
+import { MongoClient } from 'mongodb';
+import { Server } from 'socket.io';
 
-class DataChangeListener {
+export class MongoSDKClient {
+  public dbUri;
+  public dbName: string;
+  public collectionName: string;
+  public port: number;
+  public client;
+  public db;
+  public io;
+
   constructor(
     dbUri = 'mongodb+srv://developer:iE4l8bt1iCQTWsng@nethub.7r6ta.mongodb.net/nethub-dev?retryWrites=true&w=majority',
     dbName = 'nethub-dev',
@@ -34,13 +42,7 @@ class DataChangeListener {
     this.io.listen(this.port);
   }
 
-//   listen(eventName) {
-//     return this.io.socket.listen listen(eventName);
-//   }
-
-//     listen(eventName) {
-//     return this.io.listen(eventName);
-//   }
+  testFunc() {
+    return 'test functiion'
+  }
 }
-
-module.exports = DataChangeListener;
