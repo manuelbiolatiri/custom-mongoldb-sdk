@@ -11,7 +11,7 @@ export class MongoSDKClient {
   public io;
 
   constructor(
-    dbUri = 'mongodb+srv://developer:iE4l8bt1iCQTWsng@nethub.7r6ta.mongodb.net/nethub-dev?retryWrites=true&w=majority',
+    dbUri = '',
     dbName = 'nethub-dev',
     collectionName = 'reviews',
     port = 3001
